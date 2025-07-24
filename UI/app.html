@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Person Classifier</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./dropzone.min.css" />
+  <link rel="stylesheet" href="./app.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light justify-content-center">
+    <a class="navbar-brand" href="#">Sports Person Classifier</a>
+  </nav>
+
+  <div class="container">
+    <div class="row text-center mt-4">
+      <!-- Cards for each player -->
+      <div class="col card-wrapper" data-player="elon_musk">
+        <div class="card border-0">
+          <div class="custom-circle-image mx-auto">
+            <img class="img-fluid" src="/static/images/elon.png" alt="Elon Musk" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Elon Musk</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col card-wrapper" data-player="connor_mcgregor">
+        <div class="card border-0">
+          <div class="custom-circle-image mx-auto">
+            <img class="img-fluid" src="/static/images/connor.png" alt="Connor McGregor" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Connor McGregor</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col card-wrapper" data-player="steph_curry">
+        <div class="card border-0">
+          <div class="custom-circle-image mx-auto">
+            <img class="img-fluid" src="/static/images/steph.png" alt="Steph Curry" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Steph Curry</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col card-wrapper" data-player="jackie_chan">
+        <div class="card border-0">
+          <div class="custom-circle-image mx-auto">
+            <img class="img-fluid" src="/static/images/jackie.png" alt="Jackie Chan" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">Jackie Chan</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col card-wrapper" data-player="lebron_james">
+        <div class="card border-0">
+          <div class="custom-circle-image mx-auto">
+            <img class="img-fluid" src="/static/images/lebron.png" alt="LeBron James" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-uppercase">LeBron James</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload + Results -->
+    <div class="row mt-5 align-items-start">
+      <div class="col-md-4 text-center">
+        <form action="/file-upload" class="dropzone p-4" id="dropzone">
+          <div class="dz-message needsclick">
+            <img src="/static/images/upload.png" width="80" height="80" /><br />
+            <span class="note needsclick">Drop files here or click to upload</span>
+          </div>
+        </form>
+        <button id="submitBtn" type="button" class="btn btn-success mt-3">Classify</button>
+      </div>
+
+      <div class="col-md-8">
+        <div class="error text-center mb-3" id="error" style="display: none;">
+          <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>
+        </div>
+
+        <div class="table-responsive">
+          <table id="classTable" class="table table-bordered text-center">
+            <thead class="thead-dark">
+              <tr>
+                <th>Player</th>
+                <th>Probability Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Elon Musk</td><td id="score_elon_musk"></td></tr>
+              <tr><td>Connor McGregor</td><td id="score_connor_mcgregor"></td></tr>
+              <tr><td>Steph Curry</td><td id="score_steph_curry"></td></tr>
+              <tr><td>Jackie Chan</td><td id="score_jackie_chan"></td></tr>
+              <tr><td>LeBron James</td><td id="score_lebron_james"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="./dropzone.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

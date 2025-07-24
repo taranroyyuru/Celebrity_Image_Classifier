@@ -1,0 +1,32 @@
+/* === Dropzone Base Styles (Override and Cleaned) === */
+form.dropzone {
+  border: 2px dashed #007bff !important;
+  border-radius: 8px !important;
+  background: #f8f9fa !important;
+  padding: 20px !important;
+  text-align: center !important;
+  min-height: 150px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Dropzone Hover Effect */
+form.dropzone:hover {
+  background-color: #e2f0ff !important;
+}
+
+/* Dropzone Message Text */
+form.dropzone .dz-message {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Upload Icon (if included in dz-message) */
+form.dropzone .dz-message img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}

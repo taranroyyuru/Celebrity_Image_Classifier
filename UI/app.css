@@ -1,0 +1,58 @@
+/* Circle image wrapper */
+.custom-circle-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Dropzone Base Styles */
+form.dropzone {
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  background: #f8f9fa;
+  padding: 20px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form.dropzone:hover {
+  background-color: #e2f0ff;
+}
+
+form.dropzone .dz-message {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Upload Icon */
+form.dropzone .dz-message img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Error Message */
+.error {
+  background: #fdeaea;
+  border: 1px solid #f5c2c7;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+/* Table Styling */
+#classTable th,
+#classTable td {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+}
+
+#classTable th {
+  background-color: #343a40;
+  color: #fff;
+}
